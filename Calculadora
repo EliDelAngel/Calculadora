@@ -1,0 +1,274 @@
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+
+//package calcuswing;
+
+
+public class CalcuSwing extends JFrame implements ActionListener {
+    
+    
+    
+    JPanel calcu = (JPanel)this.getContentPane();
+   //crear pantalla
+    JTextField pantalla = new JTextField();
+    // crear botones
+    JButton sumab = new JButton("+");
+    JButton restab = new JButton("-");
+    JButton multib = new JButton("*");
+    JButton divb = new JButton("/");
+    JButton unob = new JButton("1");
+    JButton dosb = new JButton("2");
+    JButton treb = new JButton("3");
+    JButton cuab = new JButton("4");
+    JButton cincob = new JButton("5");
+    JButton seisb = new JButton("6");
+    JButton sieteb = new JButton("7");
+    JButton ochob = new JButton("8");
+    JButton nueveb = new JButton("9");
+    JButton cerob = new JButton("0");
+    JButton puntob = new JButton(".");
+    JButton igualb = new JButton("=");
+    JButton clearb = new JButton("Clear");
+    
+    
+    public CalcuSwing ()
+    {
+        calcu.setLayout(null);
+        setSize(350,400);
+        setVisible(true);
+        //Pantalla P
+        pantalla.setBounds(15,20,300,30);
+        add(pantalla);
+        sumab.setBounds(15,55,45,45);
+        add(sumab);
+        sumab.addActionListener(this);
+        
+        restab.setBounds(105,55,45,45);
+        add(restab);
+        restab.addActionListener(this);
+        
+        multib.setBounds(180,55,45,45);
+        add(multib);
+        multib.addActionListener(this);
+        
+        divb.setBounds(270,55,45,45);
+        add(divb);
+        divb.addActionListener(this);
+        
+        unob.setBounds(15,120,45,45);
+        add(unob);
+        unob.addActionListener(this);
+        
+        dosb.setBounds(105,120,45,45);
+        add(dosb);
+        dosb.addActionListener(this);
+        
+        treb.setBounds(180,120,45,45);
+        add(treb);
+        treb.addActionListener(this);
+                
+        cuab.setBounds(270,120,45,45);
+        add(cuab);
+        cuab.addActionListener(this);
+        
+        cincob.setBounds(15,185,45,45);
+        add(cincob);
+        cincob.addActionListener(this);
+        
+        seisb.setBounds(105,185,45,45);
+        add(seisb);
+        seisb.addActionListener(this);
+        
+        sieteb.setBounds(180,185,45,45);
+        add(sieteb);
+        sieteb.addActionListener(this);
+        
+        ochob.setBounds(270,185,45,45);
+        add(ochob);
+        ochob.addActionListener(this);
+        
+        nueveb.setBounds(15,250,45,45);
+        add(nueveb);
+        nueveb.addActionListener(this);
+        
+        cerob.setBounds(105,250,45,45);
+        add(cerob);
+        cerob.addActionListener(this);
+        
+        puntob.setBounds(180,250,45,45);
+        add(puntob);
+        puntob.addActionListener(this);
+        
+        igualb.setBounds(270,250,45,45);
+        add(igualb);
+        igualb.addActionListener(this);
+        
+        clearb.setBounds(125,310,80,40);
+        add(clearb);
+        clearb.addActionListener(this);
+    }
+    
+   
+    public static void main(String[] args) {
+       new CalcuSwing();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (ae.getSource()== unob ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("1");
+            }else{
+                pantalla.setText(pantalla.getText()+"1");
+            }
+        }
+        if (ae.getSource()== dosb ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("2");
+            }else{
+                pantalla.setText(pantalla.getText()+"2");
+            }
+        }
+        if (ae.getSource()== treb ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("3");
+            }else{
+                pantalla.setText(pantalla.getText()+"3");
+            }
+        }
+        if (ae.getSource()== cuab ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("4");
+            }else{
+                pantalla.setText(pantalla.getText()+"4");
+            }
+        }
+        if (ae.getSource()== cincob ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("5");
+            }else{
+                pantalla.setText(pantalla.getText()+"5");
+            }
+        }
+        if (ae.getSource()== seisb ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("6");
+            }else{
+                pantalla.setText(pantalla.getText()+"6");
+            }
+        }
+        if (ae.getSource()== sieteb ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("7");
+            }else{
+                pantalla.setText(pantalla.getText()+"7");
+            }
+        }
+        if (ae.getSource()== ochob ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("8");
+            }else{
+                pantalla.setText(pantalla.getText()+"8");
+            }
+        }
+        if (ae.getSource()== nueveb ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("9");
+            }else{
+                pantalla.setText(pantalla.getText()+"9");
+            }
+        }
+        if (ae.getSource()== cerob ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("0");
+            }else{
+                pantalla.setText(pantalla.getText()+"0");
+            }
+        }
+        if (ae.getSource()== sumab ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("+");
+            }else{
+                pantalla.setText(pantalla.getText()+"+");
+            }
+        }
+        if (ae.getSource()== restab ){
+            if(pantalla.getText() == ""){
+                pantalla.setText("-");
+            }else{
+                pantalla.setText(pantalla.getText()+"-");
+            }
+        }
+        if (ae.getSource()== multib ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("*");
+            }else{
+                pantalla.setText(pantalla.getText()+"*");
+            }
+        }
+        if (ae.getSource()== divb ){
+            if(pantalla.getText()== ""){
+                pantalla.setText("/");
+            }else{
+                pantalla.setText(pantalla.getText()+"/");
+            }
+        }
+        if (ae.getSource()== puntob ){
+            if(pantalla.getText()== ""){
+                pantalla.setText(".");
+            }else{
+                pantalla.setText(pantalla.getText()+".");
+            }
+        }
+        if (ae.getSource()== clearb ){
+            pantalla.setText("");
+        }
+        
+        if(ae.getSource()==igualb){
+            String cadena1 = pantalla.getText();
+            for(int i=0;i<cadena1.length();i++){
+                char caracter = cadena1.charAt(i);
+                if(caracter == '+'){
+                    String primertermino = cadena1.substring(0,i);
+                    String segundotermino =cadena1.substring(i+1,cadena1.length());
+                    
+                    double resultado = Double.parseDouble(primertermino)+Double.parseDouble(segundotermino);
+                    pantalla.setText(Double.toString(resultado));
+                    
+                }
+                if(caracter == '-'){
+                    String primertermino = cadena1.substring(0,i);
+                    String segundotermino =cadena1.substring(i+1,cadena1.length());
+                    
+                    double resultado = Double.parseDouble(primertermino)-Double.parseDouble(segundotermino);
+                    pantalla.setText(Double.toString(resultado));
+                    
+                }
+                if(caracter == '*'){
+                    String primertermino = cadena1.substring(0,i);
+                    String segundotermino =cadena1.substring(i+1,cadena1.length());
+                    
+                    double resultado = Double.parseDouble(primertermino)*Double.parseDouble(segundotermino);
+                    pantalla.setText(Double.toString(resultado));
+                    
+                }
+                if(caracter == '/'){
+                    String primertermino = cadena1.substring(0,i);
+                    String segundotermino =cadena1.substring(i+1,cadena1.length());
+                    
+                    double resultado = Double.parseDouble(primertermino)/Double.parseDouble(segundotermino);
+                    pantalla.setText(Double.toString(resultado));
+                    
+                }
+                
+            }
+            
+        }
+    }
+    
+}
